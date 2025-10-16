@@ -1,0 +1,64 @@
+/class:civil FE
+//Name:khan shanawaz
+//UIN:251C039
+//Divion:B
+
+#include<stdio.h>
+int main()
+{
+int choice;
+float num1,num2,result;
+printf("\n=== menu drive calculator ===\n");
+printf("1. addition\n");
+printf("2. divion\n");
+printf("3. subtration\n");
+printf("4. multiplication\n");
+printf("5. exit\n");
+printf("enter your choice(1-5): ");
+scanf("%d", &choice);
+
+if(choice == 5)
+{
+    printf("exiting the program...\n");
+    return 0;
+}
+printf("enter two numbers: ");
+scanf("%f %f", &num1, &num2);
+
+switch (choice)
+{
+case 1:
+    goto add;
+    break;
+
+case 2: 
+    goto div;
+    break;
+case 3:
+    goto sub;
+    break;
+case 4:
+    goto mul;
+    break;
+case 5:
+ printf("exiting program.");
+  break;
+}
+
+add:
+     result = num1 + num2;
+ printf("result = %f\n",result);
+
+ div:
+    result = num1/num2;
+    printf("result = %f\n",result);
+
+sub:
+ result = num1-num2;
+ printf("result = %f\n", result);
+
+mul:
+result = num1*num2;
+ printf("result = %f\n", result);
+    
+ return 0;
